@@ -6,10 +6,10 @@ interface iButtonProps {
   disabled: boolean
 }
 
-export const ButtonKey = (props: iButtonProps) => {
+export const ButtonKey = ({ value, onButtonClick, disabled }: iButtonProps) => {
   return (
-    <button className="button__key" disabled={props.disabled} onClick={() => props.onButtonClick(props.value)}>
-        {props.value}
+    <button className="button__key" disabled={disabled} onClick={() => onButtonClick(value)}>
+        {value}
     </button>
   )
 }

@@ -35,7 +35,7 @@ function App() {
       setPassword('OK');
     } else {
       newErrorCounter = errorCounter + 1
-      setPassword('ERROR');
+      newErrorCounter === MAX_FAILED_ATTEMPTS ? setPassword('LOCKED') : setPassword('ERROR');
       setErrorCounter(newErrorCounter);
     }
     lockKeyboard(newErrorCounter);
@@ -73,7 +73,6 @@ function App() {
     <main>
       <Screen 
         password={password}
-        lockScreen={lockInterface}
       />
       <section className="row">
         {

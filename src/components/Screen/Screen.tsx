@@ -1,13 +1,14 @@
 import './Screen.scss';
 
+const SCREEN_MESSAGES = ['OK', 'ERROR', 'LOCKED']
+
 interface iScreenProps {
   password: string;
-  lockScreen: boolean;
 }
 
-export const Screen = ({password, lockScreen}: iScreenProps) => {
+export const Screen = ({ password }: iScreenProps) => {
   const regex = /[\s\S](?!$)/g;
-  const encryptedPassword = (password === 'ERROR' || password === 'OK')? password : password.replace(regex, '*');
+  const encryptedPassword = (SCREEN_MESSAGES.includes(password)) ? password : password.replace(regex, '*');
 
   return (
     <div className='input-container'>
