@@ -11,9 +11,9 @@ const PASSCODE: string = "1978";
 const MAX_FAILED_ATTEMPTS: number = 3;
 
 function App() {
-  const [password, setPassword] = useState('');
-  const [lockInterface, setLockInterface] = useState(false);
-  const [errorCounter, setErrorCounter] = useState(0);
+  const [password, setPassword] = useState<string>('');
+  const [lockInterface, setLockInterface] = useState<boolean>(false);
+  const [errorCounter, setErrorCounter] = useState<number>(0);
 
   const handleButtonClick = (value: string): void => {
     const newPassword = `${password}${value}`;
@@ -62,7 +62,7 @@ function App() {
     // eslint-disable-next-line
   },[password])
 
-  const checkKeyPressed = (event: any) => {
+  const checkKeyPressed = (event: KeyboardEvent) => {
     if ([NUMERIC_PAD_NUMBER_0, ...NUMERIC_PAD_NUMBERS_1_TO_3, ...NUMERIC_PAD_NUMBERS_4_TO_6, ...NUMERIC_PAD_NUMBERS_7_TO_9].includes(event.key)){
       const newPassword = `${password}${event.key}`;
       updatePassword(newPassword);

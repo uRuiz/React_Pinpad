@@ -8,8 +8,8 @@ interface iScreenProps {
 
 export const Screen = ({password}: iScreenProps) => {
   const regex = /[\s\S](?!$)/g;
-  const encryptedPassword = (SCREEN_MESSAGES.includes(password)) ? password : password.replace(regex, '*');
-  let messageColor;
+  const encryptedPassword: string = (SCREEN_MESSAGES.includes(password)) ? password : password.replace(regex, '*');
+  let messageColor: string = '';
   if (password === 'ERROR'){
     messageColor = 'input__error';
   } else if (password === 'LOCKED'){

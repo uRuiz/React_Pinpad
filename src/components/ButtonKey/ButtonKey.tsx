@@ -9,7 +9,7 @@ interface iButtonProps {
 export const ButtonKey = ({value, onButtonClick, disabled}: iButtonProps) => {
   return (
     <button className="button__key" disabled={disabled} onClick={() => onButtonClick(value)}>
-        {value}
+      {value}
     </button>
   )
 }

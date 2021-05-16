@@ -9,7 +9,7 @@
   margin-right: 10px;
   margin-left: 10px;
   width: 60px;
-  box-shadow: 0 9px #e0a700;
+  box-shadow: 0 6px #e0a700;
 
   &:hover {
     background-color: #ffd55e;
@@ -18,7 +18,7 @@
 
   &:active {
     background-color: #e0a700;
-    box-shadow: 0 5px #666;
-    transform: translateY(6px);
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
   }
 }
