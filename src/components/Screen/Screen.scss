@@ -12,5 +12,19 @@
     text-align: center;
     font-size: 1.5rem;
     width: 65%;
+
+    &.input__ok {
+      background-color: rgb(150, 230, 150);
+    }
+    
+    &.input__error {
+      background-color: rgb(225, 185, 55);
+    }
+
+    &.input__locked {
+      background-color: rgb(255, 0, 0);
+    }
   }
+
 }
+
