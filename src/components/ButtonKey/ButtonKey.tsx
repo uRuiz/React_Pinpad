@@ -1,14 +1,14 @@
 import './ButtonKey.scss';
 
 interface iButtonProps {
-  number: number;
+  value: string;
   onButtonClick: any;
 }
 
 export const ButtonKey = (props: iButtonProps) => {
   return (
-    <button className="button-key" onClick={() => props.onButtonClick(props.number)}>
-        {props.number}
+    <button className="button__key" onClick={() => props.onButtonClick(props.value)}>
+        {props.value}
     </button>
   )
 }
