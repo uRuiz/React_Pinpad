@@ -15,6 +15,11 @@ function App() {
   const [lockInterface, setLockInterface] = useState(false);
   const [errorCounter, setErrorCounter] = useState(0);
 
+  const handleButtonClick = (value: string): void => {
+    const newPassword = `${password}${value}`;
+    updatePassword(newPassword);
+  }
+  
   const updatePassword = (newPassword: string) => {
     setPassword(newPassword);
     if(newPassword.length >= PASSWORD_LENGTH) {
@@ -22,28 +27,21 @@ function App() {
     }
   }
   
-  const handleButtonClick = (value: string): void => {
-    const newPassword = `${password}${value}`;
-    updatePassword(newPassword);
-  }
-
   const checkPassword = (newPassword: string): void => {
     setLockInterface(true);
     let newErrorCounter: number = 0;
     if (newPassword === PASSCODE) {
       setErrorCounter(0);
       setPassword('OK');
-      lockKeyboard(newErrorCounter);
     } else {
       newErrorCounter = errorCounter + 1
       setPassword('ERROR');
       setErrorCounter(newErrorCounter);
-      lockKeyboard(newErrorCounter);
     }
+    lockKeyboard(newErrorCounter);
   }
 
   const lockKeyboard = (newErrorCounter: number) => {
-    console.log(newErrorCounter);
     if (newErrorCounter >= MAX_FAILED_ATTEMPTS ) {
       setTimeout(() => {
         setPassword('');
