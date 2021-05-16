@@ -1,6 +1,6 @@
 .button__key {
   background-color: #ffc419;
-  border: none;
+  border: 1px solid #333;
   border-radius: 50%;
   color: #2d2d2d;
   cursor: pointer;
@@ -9,13 +9,16 @@
   margin-right: 10px;
   margin-left: 10px;
   width: 60px;
+  box-shadow: 0 9px #e0a700;
 
   &:hover {
     background-color: #ffd55e;
-    border: 1px solid white;
+    border: 1px solid #333;
   }
 
   &:active {
     background-color: #e0a700;
+    box-shadow: 0 5px #666;
+    transform: translateY(6px);
   }
 }
