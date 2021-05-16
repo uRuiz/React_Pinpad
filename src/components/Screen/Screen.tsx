@@ -6,7 +6,7 @@ interface iScreenProps {
   password: string;
 }
 
-export const Screen = ({ password }: iScreenProps) => {
+export const Screen = ({password}: iScreenProps) => {
   const regex = /[\s\S](?!$)/g;
   const encryptedPassword = (SCREEN_MESSAGES.includes(password)) ? password : password.replace(regex, '*');
 
