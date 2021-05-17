@@ -2,7 +2,7 @@ import './ButtonKey.scss';
 
 interface iButtonProps {
   value: string;
-  onButtonClick: any;
+  onButtonClick: Function;
   disabled: boolean
 }
 
