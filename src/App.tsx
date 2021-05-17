@@ -8,7 +8,8 @@ import {
   NUMERIC_PAD_NUMBER_0,
   PASSWORD_LENGTH,
   PASSCODE,
-  MAX_FAILED_ATTEMPTS
+  MAX_FAILED_ATTEMPTS,
+  SCREEN_MESSAGES
 } from './constants';
 
 function App() {
@@ -33,10 +34,10 @@ function App() {
     let newErrorCounter: number = 0;
     if (newPassword === PASSCODE) {
       setErrorCounter(0);
-      setPassword('OK');
+      setPassword(SCREEN_MESSAGES.ok);
     } else {
       newErrorCounter = errorCounter + 1
-      newErrorCounter === MAX_FAILED_ATTEMPTS ? setPassword('LOCKED') : setPassword('ERROR');
+      newErrorCounter === MAX_FAILED_ATTEMPTS ? setPassword(SCREEN_MESSAGES.locked) : setPassword(SCREEN_MESSAGES.error);
       setErrorCounter(newErrorCounter);
     }
     lockKeyboard(newErrorCounter);

@@ -5,3 +5,8 @@ export const NUMERIC_PAD_NUMBER_0: string = '0';
 export const PASSWORD_LENGTH: number = 4;
 export const PASSCODE: string = "1978";
 export const MAX_FAILED_ATTEMPTS: number = 3;
+export const SCREEN_MESSAGES = {
+  ok: 'OK', 
+  error: 'ERROR', 
+  locked: 'LOCKED'
+}

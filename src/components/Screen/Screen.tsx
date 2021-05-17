@@ -1,6 +1,5 @@
 import './Screen.scss';
-
-const SCREEN_MESSAGES = ['OK', 'ERROR', 'LOCKED']
+import { SCREEN_MESSAGES } from '../../constants';
 
 interface iScreenProps {
   password: string;
@@ -8,7 +7,8 @@ interface iScreenProps {
 
 export const Screen = ({password}: iScreenProps) => {
   const regex = /[\s\S](?!$)/g;
-  const encryptedPassword: string = (SCREEN_MESSAGES.includes(password)) ? password : password.replace(regex, '*');
+  const screenMessageValues = Object.values(SCREEN_MESSAGES);
+  const encryptedPassword: string = (screenMessageValues.includes(password)) ? password : password.replace(regex, '*');
   let messageColor: string = '';
   if (password === 'ERROR'){
     messageColor = 'input__error';
