@@ -58,8 +58,10 @@ function App() {
   }
 
   useEffect(() => {
-    document.body.addEventListener('keypress', checkKeyPressed);
-    return (): void => document.body.removeEventListener('keypress', checkKeyPressed );
+    if(password.length <= PASSWORD_LENGTH){
+      document.body.addEventListener('keypress', checkKeyPressed);
+      return (): void => document.body.removeEventListener('keypress', checkKeyPressed );      
+    }
     // eslint-disable-next-line
   },[password])
 
