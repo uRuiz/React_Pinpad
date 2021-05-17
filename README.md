@@ -1,12 +1,36 @@
-# Getting Started with Create React App
+# Getting Started (PIN PAD APP)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project was created for Acid Tango code challenge. It implements a pin pad. The code to unlock the pin pad is 2012 (Acid Tango foundation year)
+
+## Requeriments
+
+- Buttons should work with either touch or clicks
+- The pin should be hidden except for the last number
+- Hardcode somewhere in the code right PIN (which eventually will be checked against an API)
+- The pin is always max 4 digits long
+- When the user inputs 4 digits the pin is checked
+- If the inserted PIN is correct the screen displays OK and the pin is reset
+- If the inserted PIN is wrong the screen displays ERROR and the pin is reset
+
+## Bonus requirements
+
+- Usage of TypeScript
+- After 3 wrong attempts the pin pad locks for 30 secs, showing LOCKED on the display
+
+## In order to start the Pin pad App
+
+If you want to start the Pinpad App, in the project directory you must run:
+
+#### `npm install`
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -18,29 +42,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
