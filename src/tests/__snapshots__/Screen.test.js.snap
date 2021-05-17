@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <Screen /> It should show <Screen /> properly 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className=""
+    disabled={true}
+    type="text"
+    value="***2"
+  />
+</div>
+`;
+
+exports[`Tests in <Screen /> It should show the password send by props 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className="input__error"
+    disabled={true}
+    type="text"
+    value="ERROR"
+  />
+</div>
+`;

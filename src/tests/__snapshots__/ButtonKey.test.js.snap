@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <Button /> It should show <ButtonKey /> properly 1`] = `
+<button
+  className="button__key"
+  onClick={[Function]}
+>
+  1
+</button>
+`;
+
+exports[`Tests in <Button /> It should show the value and disables props 1`] = `
+<button
+  className="button__key"
+  disabled={true}
+  onClick={[Function]}
+>
+  1
+</button>
+`;

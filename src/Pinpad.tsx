@@ -12,7 +12,7 @@ import {
   SCREEN_MESSAGES
 } from './constants';
 
-function App() {
+function Pinpad() {
   const [password, setPassword] = useState<string>('');
   const [lockInterface, setLockInterface] = useState<boolean>(false);
   const [errorCounter, setErrorCounter] = useState<number>(0);
@@ -126,4 +126,4 @@ function App() {
   );
 }
 
-export default App;
+export default Pinpad;
