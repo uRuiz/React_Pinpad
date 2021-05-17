@@ -10,11 +10,11 @@ export const Screen = ({password}: iScreenProps) => {
   const screenMessageValues = Object.values(SCREEN_MESSAGES);
   const encryptedPassword: string = (screenMessageValues.includes(password)) ? password : password.replace(regex, '*');
   let messageColor: string = '';
-  if (password === 'ERROR'){
+  if (password === SCREEN_MESSAGES.error){
     messageColor = 'input__error';
-  } else if (password === 'LOCKED'){
+  } else if (password === SCREEN_MESSAGES.locked){
     messageColor = 'input__locked';
-  } else if (password === 'OK'){
+  } else if (password === SCREEN_MESSAGES.ok){
     messageColor = 'input__ok';
   }
 
