@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import { ButtonKey } from './components/ButtonKey/ButtonKey';
 import { Screen } from './components/Screen/Screen';
-
-const NUMERIC_PAD_NUMBERS_1_TO_3: Array<string> = ['1','2','3'];
-const NUMERIC_PAD_NUMBERS_4_TO_6: Array<string> = ['4','5','6'];
-const NUMERIC_PAD_NUMBERS_7_TO_9: Array<string> = ['7','8','9'];
-const NUMERIC_PAD_NUMBER_0: string = '0';
-const PASSWORD_LENGTH: number = 4;
-const PASSCODE: string = "1978";
-const MAX_FAILED_ATTEMPTS: number = 3;
+import { 
+  NUMERIC_PAD_NUMBERS_1_TO_3, 
+  NUMERIC_PAD_NUMBERS_4_TO_6,
+  NUMERIC_PAD_NUMBERS_7_TO_9,
+  NUMERIC_PAD_NUMBER_0,
+  PASSWORD_LENGTH,
+  PASSCODE,
+  MAX_FAILED_ATTEMPTS
+} from './constants';
 
 function App() {
   const [password, setPassword] = useState<string>('');
